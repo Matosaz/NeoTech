@@ -142,8 +142,7 @@ header {
   .Inicial {
     min-height: 2vh;
     align-items: center;
-    background: #E0FBE2 no-repeat;
-    background-size: contain;
+    background: linear-gradient(#E0FBE2, #628d60 90%); 
     background-position:center;
     width: 100%;
     display: flex;
@@ -199,8 +198,8 @@ header {
   }
   .img2{
     position:relative;
-    height: 525px;
-    top: 0px;
+    height: 400px;
+    top: -100px;
     left:-100px;
     align-items: center;
     
@@ -208,57 +207,102 @@ header {
 /*Fim Inicial*/
 
 /*Início Serviços*/
+  .background-rectangle {
+   background: linear-gradient( #628d60, #bfe4be);/* #748374 Cor de fundo do retângulo  #bfe4be; */
+   border-radius: 10px; /* Borda arredondada, se desejado */
+   padding: 20px; /* Espaçamento interno */
+   margin: 120px auto; 
+   margin-top: 0px;
+   height: 1080px;/* Margem externa, ajustável conforme necessário */
+  }
+  
   .Serviços .txt_Serviço{
-    font-size: 30px;
-    text-align: center;
-    margin: 120px;
-  }
-
-  .column {
-    float: right;
-    width: 360px;
-    padding: 0 20px;
-    align-items: center;
-    
-  
-  }
-  
-  /* Remove extra left and right margins, due to padding in columns */
-  .row {align-items: center;
-        margin-right: 120px;
-        height: 10px;
-        }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 300px 10px;
-    margin-bottom: 100px;
-    text-align: center;
-    background-color: #f1f1f1;
-    border-radius: 20px;
+    font-size: 2.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 20px 120px;
     font-family: sans-serif;
-    transition: padding 0.5s;
-  }
-
-  .card:hover{
-    padding: 100px
-  }
-
-  .txt{
+    letter-spacing: 1px;
     text-align: center;
-    display: absolute;
-    margin-top: -20px;
+    margin-top: 20px;
+    color: #283029;
+    background: rgb(94, 138, 94);
+    text-align: center;
+    display: inline-block;
+    margin-left: 690px;
   }
 
+  .wrapper{
+    padding: 40px 50px;
+  }
+  #card-area{
+    padding: 10px 200px;
+  }
+  .box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 50px;
+    margin-top: -10px;
+  }
+  .box{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .box img{
+    width: 100%;
+    border-radius: 10px;
+    height: 600px;
+    display: block;
+    transition: transform 0.5s;
+  }
+  .overlay{
+    height: 0;
+    width: 80%;
+    background: linear-gradient(transparent, #bce4bc 65%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 16px;
+    font-family: sans-serif;
+    transition: height 0.5s;
+  }
+  .overlay h3{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: #333;
+  }
+  .overlay a{
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: rgb(24, 110, 24);
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px 18px;
+    color: rgb(188, 219, 186);
+    font-family: sans-serif;
+  }
+  .box:hover img{
+  transform: scale(1.2)
+  }
+  .box:hover .overlay{
+    height: 100%;
+  }
   /*Fim serviços*/
 
   
