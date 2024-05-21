@@ -7,6 +7,7 @@ header {
     display: flex;
     justify-content: center;
     background: #bfe4be;
+    z-index: 1;
   }
 
   .user-img{
@@ -108,7 +109,7 @@ header {
     justify-content: space-between;
   }
   .navbar .links{
-    display: flex;
+    display: inline-flex;
     position: relative;
     gap: 60px;
     text-decoration: none;
@@ -141,6 +142,7 @@ header {
     background: #E0FBE2 no-repeat;
     background-size: contain;
     background-position:center;
+    width: 100%;
     display: flex;
      
   }
@@ -209,6 +211,38 @@ header {
     margin: 120px;
   }
 
+  .column {
+    float: right;
+    width: 360px;
+    padding: 0 20px;
+    align-items: center;
+    
+  
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {align-items: center;
+        margin-right: 120px;
+        height: 100px;
+        }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 455px 0px 60px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: #f1f1f1;
+    font-family: sans-serif;
+  }
 
 
   /*Fim serviços*/
