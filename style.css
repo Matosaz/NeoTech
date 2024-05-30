@@ -142,7 +142,7 @@ header {
   .Inicial {
     min-height: 2vh;
     align-items: center;
-    background: linear-gradient(#E0FBE2, #628d60 90%); 
+    background: linear-gradient(to bottom right ,#E0FBE2 20%, #628d60 100%); 
     background-position:center;
     width: 100%;
     display: flex;
@@ -199,50 +199,47 @@ header {
   .img2{
     position:relative;
     height: 400px;
-    top: -100px;
-    left:-100px;
-    align-items: center;
-    
+    width: 235%;
+    margin-top: 125px;
+    left: -100px; 
   }
 /*Fim Inicial*/
 
 /*Início Serviços*/
   .background-rectangle {
-   background: linear-gradient( #628d60, #bfe4be);/* #748374 Cor de fundo do retângulo  #bfe4be; */
-   border-radius: 10px; /* Borda arredondada, se desejado */
+   background: linear-gradient( to bottom left , #628d60 0%, #E0FBE2 80%);/* #748374 Cor de fundo do retângulo  #bfe4be; */
    padding: 20px; /* Espaçamento interno */
    margin: 120px auto; 
    margin-top: 0px;
-   height: 1080px;/* Margem externa, ajustável conforme necessário */
+   height: 860px;/* Margem externa, ajustável conforme necessário */
   }
   
   .Serviços .txt_Serviço{
-    font-size: 2.1rem;
+    font-size: 2.6rem;
     font-weight: 600;
-    border-radius: 50px;
-    padding: 20px 120px;
+    padding: 20px ;
+    width: 100%;
     font-family: sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-align: center;
-    margin-top: 20px;
-    color: #283029;
-    background: rgb(94, 138, 94);
-    text-align: center;
-    display: inline-block;
-    margin-left: 690px;
+    margin-top: -130px;
+    color: #333;
+    display: fixed;
+    margin-left: -20px;
+    text-transform: uppercase;
+   
   }
 
   .wrapper{
     padding: 40px 50px;
   }
   #card-area{
-    padding: 10px 200px;
+    padding: 0px 200px;
   }
   .box-area{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 50px;
-    margin-top: -10px;
   }
   .box{
     border-radius: 10px;
@@ -304,6 +301,85 @@ header {
     height: 100%;
   }
   /*Fim serviços*/
+
+  /*Inicio Orçamento*/
+ 
+  .background-rectangle2 {
+    background: linear-gradient( #E0FBE2,#bfe4be, transparent 120%);/* #748374 Cor de fundo do retângulo  #bfe4be; */
+    padding: 20px; /* Espaçamento interno */
+    margin: 120px auto; 
+    margin-top: -115px;
+    height: 600px;/* Margem externa, ajustável conforme necessário */
+   }
+   .row{
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+    grid-gap: 10px;
+    padding: 5rem 2rem;
+    font-family: sans-serif;
+   }
+   .row .imgWrapper video{
+    height: 450px;
+    padding-left: -110px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s;
+   }
+   .row .imgWrapper:hover video{
+    transform: scale(1.075);
+   }
+   .row .contentWrapper{
+    width: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    margin-top: -70px;
+   }
+   .row .contentWrapper .content h2{
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+   }
+   .row .contentWrapper .content p{
+    color: #333;
+    font-size: 1.09rem;
+   }
+   .botao2{
+    
+    background-color: rgb(16, 102, 16);
+    color: rgb(245, 245, 244);
+    cursor: pointer;
+    padding: 0.80rem 1.00rem;
+    font-size: 1.2rem;
+    position: relative;
+    display: inline;
+    transition: padding 0.3s;
+    top: 25px;
+    
+   }
+   .botao2:hover{
+    background-color: #3c9639;
+    color: #f5f5f5;
+    padding: 0.9rem 1.1rem;
+  }
+   /*Fim Orçamento*/
+
+    /*Inicio Footer*/
+    .background-rectangle3{
+      background:  linear-gradient(#dcf1dd, #718a70 75%); /* #748374 Cor de fundo do retângulo  #bfe4be; */
+      padding: 20px; /* Espaçamento interno */
+      margin: 120px auto; 
+      margin-top: -115px;
+      height: 400px;
+    }
+     /*Fim Footer*/
+
 /* Media Queries */
 @media (max-width: 768px) {
   .user-img {
@@ -357,12 +433,7 @@ header {
       height: auto;
   }
 
-  .Serviços .txt_Serviço {
-      font-size: 1.8rem;
-      padding: 10px 60px;
-      margin-left: auto;
-      margin-right: auto;
-  }
+  
 
   #card-area {
       padding: 10px 50px;
@@ -421,11 +492,11 @@ header {
       height: auto;
   }
 
-  .txt_Serviço{
-    display: inline;
-    margin: 200px;
-  }
+ 
   #card-area {
       padding: 10px 20px;
+  }
+  .background-rectangle{
+    height: 1000px;
   }
 }
